@@ -2,7 +2,7 @@ import getAllPosts from '@/lib/getAllPosts';
 import Link from 'next/link';
 import React from 'react';
 
-const Posts = async () => {
+export default async function Posts() {
   const posts = await getAllPosts();
   console.log(posts);
   return (
@@ -18,6 +18,5 @@ const Posts = async () => {
       </ul>
     </div>
   );
-};
+}
 
-export default Posts;
